@@ -97,6 +97,19 @@ impl zed::Extension for WeaveExtension {
             env: vec![],
         })
     }
+
+    fn context_server_configuration(
+        &mut self,
+        _context_server_id: &ContextServerId,
+        _project: &Project,
+    ) -> Result<Option<zed::ContextServerConfiguration>> {
+        Ok(Some(zed::ContextServerConfiguration {
+            installation_instructions: include_str!("../configuration/installation_instructions.md")
+                .to_string(),
+            settings_schema: include_str!("../configuration/settings_schema.json").to_string(),
+            default_settings: include_str!("../configuration/default_settings.jsonc").to_string(),
+        }))
+    }
 }
 
 zed::register_extension!(WeaveExtension);

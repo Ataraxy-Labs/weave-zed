@@ -1,7 +1,7 @@
-id = "weave"
-name = "Weave"
+id = "mcp-server-weave"
+name = "Weave MCP Server"
 description = "Entity-level semantic merge coordination for multi-agent development. Claim entities before editing, detect conflicts, preview merges at the function/class level."
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
 authors = ["Rohan Sharma <rohan@ataraxy-labs.com>"]
 repository = "https://github.com/Ataraxy-Labs/weave-zed"
